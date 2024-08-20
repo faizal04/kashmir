@@ -1,10 +1,10 @@
 <?php
 
 // Connect to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "kashweb";
+$servername = "mysql.hostinger.com";
+$username = "kashweb";
+$password = "ibrahimbhat123";
+$dbname = "u873877420_kashweb";
 
 try {
     $conn = mysqli_connect($servername, $username, $password, $dbname);
