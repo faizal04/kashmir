@@ -16,7 +16,7 @@ const tabs = document.querySelectorAll(".operations__tab");
 const tabscontainer = document.querySelector(".operations__tab-container");
 const content = document.querySelectorAll(".operations__content");
 const nav = document.querySelector(".nav");
-const logo = nav.querySelector("img");
+// const logo = nav.querySelector("img");
 const lazyimg = document.querySelectorAll('img[data-src]');
 const slide = document.querySelectorAll(".slide");
 const lftbtn = document.querySelector(".slider__btn--left");
@@ -38,21 +38,23 @@ const closeModal = function () {
 
 btnsOpenModal.forEach(btn => btn.addEventListener("click", openModal));
 
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
+// btnCloseModal.addEventListener('click', closeModal);
+// overlay.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
     closeModal();
   }
 });
+
 btntoscroll.addEventListener("click", function () {
   console.log(sectiontoscroll.clientHeight, sectiontoscroll.clientWidth);
   sectiontoscroll.scrollIntoView({ behavior: "smooth" });
 });
 
 linkclick.addEventListener("click", function (e) {
-  e.preventDefault();
+
+  // e.preventDefault();
   console.log(e.target);
   if (e.target.classList.contains("nav__link")) {
 
@@ -253,3 +255,52 @@ document.addEventListener("keydown", function (e) {
     prevSlide();
   }
 })
+
+
+/*
+blog script
+
+ const lftbtn = document.querySelector(".slider__btn--left");
+    const rgtbtn = document.querySelector(".slider__btn--right");
+    const dotshole = document.querySelectorAll(".dots__dot");
+    const slide = document.querySelectorAll(".slide");
+
+    let maxSlide = slide.length;
+    let currSlide = 0;
+    // go to the slide function
+    const gotoslide = function (sli) {
+        slide.forEach((sl, i) => {
+            sl.style.transform = `translateX(${100 * (i - sli)}%)`;
+        })
+        // activedot(sli);
+    }
+    gotoslide(0);
+
+    const nextSlide = function () {
+        if (currSlide === maxSlide - 1) {
+            currSlide = 0;
+        }
+        else
+            currSlide++;
+        console.log(currSlide);
+        gotoslide(currSlide);
+    }
+    const prevSlide = function () {
+        if (currSlide === 0) {
+            currSlide = maxSlide - 1;
+        }
+        else
+            currSlide--;
+        gotoslide(currSlide);
+    }
+    rgtbtn.addEventListener("click", nextSlide);
+    lftbtn.addEventListener("click", prevSlide)
+
+    dotshole.forEach((d, i) => {
+        d.addEventListener("click", function () {
+            gotoslide(i);
+        })
+    })
+
+
+*/
