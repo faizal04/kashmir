@@ -7,32 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="shortcut icon" type="image/png" href="img/icon.png" />
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <title>Kashmir</title>
 </head>
 
 <body>
+
+  <?php include "./_navbar.php" ?>
+
   <header class="header">
-    <nav class="nav">
-      <h1>KASHMIR</h1>
-      <ul class="nav__links">
-        <li class="nav__item">
-          <a class="nav__link" href="#section--1">Tradition</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#section--2">Explore</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#section--3">Gallery</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="./blog.html">Blogs</a>
-        </li>
-
-      </ul>
-    </nav>
-
     <div class="header__title">
       <h1>
         اگر
@@ -49,6 +32,7 @@
       <img src="./img/pexels-imadclicks-3974036.jpg" class="header__img" alt="Minimalist bank items" />
     </div>
   </header>
+
 
   <section class="section" id="section--1">
     <div class="section__title">
@@ -223,28 +207,7 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <ul class="footer__nav">
-      <li class="footer__item">
-        <a class="footer__link" href="#">About</a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__link" href="#section--1">Tradition</a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__link" href="#section--2">Explore</a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__link" href="#section--3">Gallery</a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__link" href="#">Contact Us</a>
-      </li>
-    </ul>
-    <h1>KASHMIR</h1>
-    <p>2024 KASHMIR, <a href="https://faisalharray.netlify.app/" class="right">Faisal Harray</a> all right reserved</p>
 
-  </footer>
 
   <div class="modal hidden">
     <button class="btn--close-modal">&times;</button>
@@ -264,7 +227,12 @@
   </div>
   <div class="overlay hidden"></div>
 
+  <?php include "../partials/_footer.php" ?>
+
+
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
