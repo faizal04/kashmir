@@ -20,12 +20,12 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
             <a class="nav__link" href="#section--3">Gallery</a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="./blog.php">Blogs</a>
+            <a class="nav__link" href="./starter/blog.php">Blogs</a>
         </li>
         <?php
         if(!$logined){
             echo "       <li class='nav__item'>
-            <a href='./_adminlogin.php' class='tm-nav-link' data-bs-toggle='modal'>
+            <a href='./starter/_adminlogin.php' class='tm-nav-link' data-bs-toggle='modal'>
                 Admin Login
             </a>
         </li>";
