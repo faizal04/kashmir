@@ -87,7 +87,7 @@
                 session_start();
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $row['username'];
-              header("Location: index.php");
+              header("Location: ../index.php");
             }
         }
 
