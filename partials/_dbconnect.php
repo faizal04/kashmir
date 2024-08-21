@@ -2,7 +2,7 @@
 
 // Connect to the database
 $servername = "mysql.hostinger.com";
-$username = "kashweb";
+$username = "u873877420_kashweb";
 $password = "ibrahimbhat123";
 $dbname = "u873877420_kashweb";
 // $servername = "localhost";
