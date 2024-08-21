@@ -13,7 +13,7 @@
 
 <body>
 
-  <?php include "./_navbar.php" ?>
+  <?php include "./starter/_navbar.php" ?>
 
   <header class="header">
     <div class="header__title">
@@ -227,10 +227,10 @@
   </div>
   <div class="overlay hidden"></div>
 
-  <?php include "../partials/_footer.php" ?>
+  <?php include "./partials/_footer.php" ?>
 
 
-  <script src="script.js"></script>
+  <script src="script"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
