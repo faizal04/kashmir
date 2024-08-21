@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="shortcut icon" type="image/png" href="img/icon.png" />
 
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <title>Kashmir</title>
 </head>
 
@@ -29,7 +29,7 @@
       </h1>
       <h4>If there is a paradise on earth,<br> It is this, it is this, it is this.</h4>
       <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-      <img src="./img/pexels-imadclicks-3974036.jpg" class="header__img" alt="Minimalist bank items" />
+      <img src="./starter/img/pexels-imadclicks-3974036.jpg" class="header__img" alt="Minimalist bank items" />
     </div>
   </header>
 
@@ -43,11 +43,11 @@
     </div>
 
     <div class="features">
-      <img src="./img/wazwan-min.jpg" data-src="./img/wazwan.jpg" alt="Computer" class="features__img lazy-img" />
+      <img src="./starter/img/wazwan-min.jpg" data-src="./starter/img/wazwan.jpg" alt="Computer" class="features__img lazy-img" />
       <div class="features__feature">
         <div class="features__icon">
           <svg>
-            <use xlink:href="img/icons.svg#icon-monitor"></use>
+            <use xlink:href="./starter/img/icons.svg#icon-monitor"></use>
           </svg>
         </div>
         <h5 class="features__header">Cuisine</h5>
@@ -64,7 +64,7 @@
       <div class="features__feature">
         <div class="features__icon">
           <svg>
-            <use xlink:href="img/icons.svg#icon-trending-up"></use>
+            <use xlink:href="./starter/img/icons.svg#icon-trending-up"></use>
           </svg>
         </div>
         <h5 class="features__header">Clothing</h5>
@@ -75,15 +75,15 @@
           especially Pashmina shawls.
         </p>
       </div>
-      <img src="./img/fb52ba_9ce3abb6ecec446f9f790beda5c18bdb~mv2.webp"
-        data-src="./img/fb52ba_9ce3abb6ecec446f9f790beda5c18bdb~mv2.webp" alt="Plant" class="features__img lazy-img" />
+      <img src="./starter/img/fb52ba_9ce3abb6ecec446f9f790beda5c18bdb~mv2.webp"
+        data-src="./starter/img/fb52ba_9ce3abb6ecec446f9f790beda5c18bdb~mv2.webp" alt="Plant" class="features__img lazy-img" />
 
-      <img src="./img/haba khtoon-min.jpg" data-src="./img/haba khtoon.jpg" alt="Haba khatoon" height="300px"
+      <img src="./starter/img/haba khtoon-min.jpg" data-src="./starter/img/haba khtoon.jpg" alt="Haba khatoon" height="300px"
         class="features__img lazy-img" />
       <div class="features__feature">
         <div class="features__icon">
           <svg>
-            <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            <use xlink:href="./starter/img/icons.svg#icon-credit-card"></use>
           </svg>
         </div>
         <h5 class="features__header">Literature and Poetry</h5>
@@ -120,7 +120,7 @@
       <div class="operations__content operations__content--1 operations__content--active">
         <div class="operations__icon operations__icon--1">
           <svg>
-            <use xlink:href="img/icons.svg#icon-upload"></use>
+            <use xlink:href="./starter/img/icons.svg#icon-upload"></use>
           </svg>
         </div>
         <h5 class="operations__header">
@@ -138,7 +138,7 @@
       <div class="operations__content operations__content--2">
         <div class="operations__icon operations__icon--2">
           <svg>
-            <use xlink:href="img/icons.svg#icon-home"></use>
+            <use xlink:href="./starter/img/icons.svg#icon-home"></use>
           </svg>
         </div>
         <h5 class="operations__header">
@@ -155,7 +155,7 @@
       <div class="operations__content operations__content--3">
         <div class="operations__icon operations__icon--3">
           <svg>
-            <use xlink:href="img/icons.svg#icon-user-x"></use>
+            <use xlink:href="./starter/img/icons.svg#icon-user-x"></use>
           </svg>
         </div>
         <h5 class="operations__header">
@@ -183,12 +183,12 @@
 
 
 
-      <div class="slide"><img src="img/gallery 1.jpg" alt="Photo 1" /></div>
-      <div class="slide"><img src="img/gallery 2.jpg" alt="Photo 2" /></div>
-      <div class="slide"><img src="img/gallery 3.jpg" alt="Photo 3" /></div>
-      <div class="slide"><img src="img/gallery 4.jpg" alt="Photo 4" /></div>
-      <div class="slide"><img src="img/gallery 5.jpg" alt="Photo 4" /></div>
-      <div class="slide"><img src="img/gallery 7.jpg" alt="Photo 4" /></div>
+      <div class="slide"><img src="./starter/img/gallery 1.jpg" alt="Photo 1" /></div>
+      <div class="slide"><img src="./starter/img/gallery 2.jpg" alt="Photo 2" /></div>
+      <div class="slide"><img src="./starter/img/gallery 3.jpg" alt="Photo 3" /></div>
+      <div class="slide"><img src="./starter/img/gallery 4.jpg" alt="Photo 4" /></div>
+      <div class="slide"><img src="./starter/img/gallery 5.jpg" alt="Photo 4" /></div>
+      <div class="slide"><img src="./starter/img/gallery 7.jpg" alt="Photo 4" /></div>
 
       <button class="slider__btn slider__btn--left">&larr;</button>
       <button class="slider__btn slider__btn--right">&rarr;</button>
@@ -230,9 +230,10 @@
   <?php include "./partials/_footer.php" ?>
 
 
-  <script src="script"></script>
+  <script src="./js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 <!-- checking the latest update -->
+
 </html>

@@ -293,7 +293,6 @@ h4 {
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
-
   background-color: #fff;
 }
 
@@ -304,7 +303,7 @@ h4 {
 
 .operations__tab {
   margin-right: 2.5rem;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
 
 .operations__tab span {
