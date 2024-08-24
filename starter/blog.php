@@ -11,8 +11,8 @@
 <body>
 
 
+    <?php include "./_dbconnect.php" ?>
     <?php include "./_navbar.php" ?>
-    <?php include "../partials/_dbconnect.php" ?>
 
 
     <!-- stater img -->
@@ -31,6 +31,7 @@
 
         <div class="blog">
             <!-- get post from database -->
+    
             <?php
             if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
                 $logined = true;

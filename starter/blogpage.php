@@ -130,7 +130,7 @@
 <body>
     <!-- build navbar by yourself  -->
     <?php
-    include "../partials/_dbconnect.php";
+    include "./_dbconnect.php";
     include "../starter/_navbar.php";
 
     $id = $_GET['catid'];
@@ -157,64 +157,95 @@
     </div>
 
 
+
+
     <div class="comment-section">
         <h2>Comments</h2>
 
+        <?php
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $name = $_POST['comment-title'];
+            $comment = $_POST['comment-desc'];
+
+            $sql4 = "INSERT INTO `comment` (`name`, `comment`, `timestamp`, `cat-id`) VALUES ('$name', '$comment', current_timestamp(), '$id')";
+            $result4 = mysqli_query($conn, $sql4);
+        }
+
+
+        ?>
         <!-- Comment Input Area -->
-        <div class="comment-input">
-            <input type="text" id="userName" placeholder="Your name..." required>
-            <textarea id="commentBox" placeholder="Add a public comment..." required></textarea>
-            <button id="postComment" disabled>Comment</button>
-            < <!-- Comment List -->
-                <div class="comment-list">
-                    <!-- Comments will be dynamically added here -->
-                </div>
+        <form action="" method="POST" class="comment-input">
+            <div>
+                <input name="comment-title" type="text" id="userName" placeholder="Your name..." required>
+            </div>
+            <div>
+                <textarea name="comment-desc" id="commentBox" placeholder="Add a public comment..." required></textarea>
+            </div>
+            <div>
+                <button type="submit" id="postComment" >Comment</button>
+            </div>
+        </form>
+
+        <!-- Comment List -->
+
+        <?php
+        $sql3 = "SELECT * FROM `comment` WHERE `cat-id` = $id";
+        $result3 = mysqli_query($conn, $sql3);
+
+        $comments = array();
+
+        while ($row = mysqli_fetch_assoc($result3)) {
+            $comments[] = array(
+                'sno' => $row['sno'],
+                'com_title' => $row['name'],
+                'com_desc' => $row['comment'],
+                'date' => $row['timestamp']
+            );
+        }
+
+        echo '<script>console.log(' . json_encode($comments) . ');</script>';
+
+        echo '<script>var comments = ' . json_encode($comments) . ';</script>';
+        ?>
+
+        <div class="comment-list">
+            <!-- Comments will be dynamically added here -->
         </div>
 
 </body>
 
 <script>
-    document.getElementById('commentBox').addEventListener('input', function() {
-        const commentValue = this.value.trim();
-        const nameValue = document.getElementById('userName').value.trim();
-        document.getElementById('postComment').disabled = commentValue === "" || nameValue === "";
-    });
-
-    document.getElementById('userName').addEventListener('input', function() {
-        const nameValue = this.value.trim();
-        const commentValue = document.getElementById('commentBox').value.trim();
-        document.getElementById('postComment').disabled = nameValue === "" || commentValue === "";
-    });
-
-    document.getElementById('postComment').addEventListener('click', function() {
-        const userName = document.getElementById('userName').value.trim();
-        const commentText = document.getElementById('commentBox').value.trim();
-
-        if (userName && commentText) {
-            addComment(userName, commentText);
-            document.getElementById('userName').value = "";
-            document.getElementById('commentBox').value = "";
-            document.getElementById('postComment').disabled = true;
-        }
-    });
-
-    function addComment(name, text) {
+    document.addEventListener('DOMContentLoaded', function() {
         const commentList = document.querySelector('.comment-list');
 
-        const commentElement = document.createElement('div');
-        commentElement.classList.add('comment');
+        if (comments.length > 0) {
+            comments.forEach(function(comment) {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
 
-        const userName = document.createElement('h4');
-        userName.textContent = name;
+                const commentTitle = document.createElement('h4');
+                commentTitle.textContent = comment.com_title; // Title or name of the commenter
 
-        const commentText = document.createElement('p');
-        commentText.textContent = text;
+                const commentDesc = document.createElement('p');
+                commentDesc.textContent = comment.com_desc; // Comment description
 
-        commentElement.appendChild(userName);
-        commentElement.appendChild(commentText);
+                const commentDate = document.createElement('span');
+                commentDate.textContent = new Date(comment.date).toLocaleString(); // Convert timestamp to readable format
+                commentDate.classList.add('comment-date');
 
-        commentList.appendChild(commentElement);
-    }
+                commentElement.appendChild(commentTitle);
+                commentElement.appendChild(commentDesc);
+                commentElement.appendChild(commentDate);
+
+                commentList.appendChild(commentElement);
+            });
+        } else {
+            // If there are no comments, you can optionally show a message
+            const noComments = document.createElement('p');
+            noComments.textContent = "No comments yet.";
+            commentList.appendChild(noComments);
+        }
+    });
 </script>
 
 </html>
