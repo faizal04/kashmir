@@ -1,12 +1,12 @@
 <!-- Commented PHP code -->
-<!-- <?php
+<?php
 session_start();
 if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
     $logined = true;
 } else {
     $logined = false;
 }
-?> -->
+?>
 
 <nav class="nav">
     <h1>KASHMIR</h1>

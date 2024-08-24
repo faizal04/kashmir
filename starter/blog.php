@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="blog_tilte">
-                            <h4><?php echo $title; ?></h4>
+                            <h4><a href="blogpage.php?catid=<?php echo $sno; ?>"><?php echo $title; ?></a></h4>
                             <p><?php echo substr($desc, 0, 250); ?></p>
                             <p><?php echo $date; ?></p>
 
@@ -79,7 +79,7 @@
             }
             ?>
 
-            <div class="headblog">
+            <!-- <div class="headblog">
                 <div class="recent_blog--header">
                     <div class="recent_blog--content">
                         <img src="./img/card.jpg" alt="">
@@ -93,7 +93,7 @@
                             maxime voluptatibus voluptatem non ducimus laborum ipsam error?</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
